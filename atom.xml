@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-01-22T08:45:28.282Z</updated>
+  <updated>2015-01-22T08:49:09.792Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,21 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test]]></title>
+    <link href="http://yoursite.com/2015/01/22/test/"/>
+    <id>http://yoursite.com/2015/01/22/test/</id>
+    <published>2015-01-22T08:47:47.000Z</published>
+    <updated>2015-01-22T08:49:01.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
+    <summary type="html">
+    <![CDATA[]]>
+    </summary>
+    
+      <category term="blog" scheme="http://yoursite.com/categories/blog/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Poetry Form Checker(诗歌形式检测小程序)]]></title>
