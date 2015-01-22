@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-01-21T14:38:54.219Z</updated>
+  <updated>2015-01-22T03:44:41.428Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,39 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Poetry Form Checker(诗歌形式检测小程序)]]></title>
+    <link href="http://yoursite.com/2015/01/22/Poetry-Form-Checker-%E8%AF%97%E6%AD%8C%E5%BD%A2%E5%BC%8F%E6%A3%80%E6%B5%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://yoursite.com/2015/01/22/Poetry-Form-Checker-诗歌形式检测小程序/</id>
+    <published>2015-01-22T03:31:28.000Z</published>
+    <updated>2015-01-22T03:35:18.000Z</updated>
+    <content type="html"><![CDATA[<p> Poetry Form Checker</p>
+<p>Limericks, sonnets, haiku, and other forms of poetry each follow prescribed patterns that give the number of lines, the number of syllables on each line, and a rhyme scheme. For example, limericks are five lines long; the first, second, and fifth lines each have eight syllables and rhyme with each other; and the third and fourth lines each have five syllables and rhyme with each other. (There are additional rules about the location and number of stressed vs. unstressed syllables, but we’ll ignore those rules for this assignment.)</p>
+<p>Here is a stupendous work of limerick art:</p>
+<pre><code>I wish I had thought <span class="keyword">of</span> a rhyme
+Before I ran <span class="keyword">all</span> <span class="keyword">out</span> <span class="keyword">of</span> <span class="typename">time</span>!
+I<span class="attribute">'ll</span> sit here instead,
+A cloud <span class="keyword">on</span> my head
+That rains <span class="attribute">'til</span> I<span class="attribute">'m</span> covered <span class="keyword">with</span> slime.
+</code></pre><p>We’re sure that you’ve all kept yourselves awake wondering if there was a way to have a computer program check whether a poem is a limerick or if it follows some other poetry pattern. Here’s your chance to resolve the question!<br>The CMU Pronouncing Dictionary</p>
+<p>The Carnegie Mellon University Pronouncing Dictionary describes how to pronounce words. Head there now and look up a couple of words; try searching for words like “Daniel”, “is”, and “goofy”, and see if you can interpret the results. Do contractions like “I’ll” (short for “I will”) and “we’ll” (short for “we will”) work? Try clicking the “Show Lexical Stress” checkbox too, and see how that changes the result.</p>
+<p>Here is the output for “Daniel” (with “Show Lexical Stress” turned on): D AE1 N Y AH0 L. Each of the separate pieces describes a sound; these pieces are called phonemes. The phonemes are either vowel sounds or consonant sounds, and they are from a project called Arpabet that was created by the Advanced Research Projects Agency (ARPA) back in the 1970’s. The vowel phonemes all have a number after them; these indicate a level of stress. For example, in “Daniel”, the stress falls on the first vowel, AE1, and the second vowel is unstressed, AH0. The higher the level of stress, the larger the number after the vowel phoneme. In the CMU Pronouncing Dictionary, stress is always on a vowel sound.</p>
+<p>Your program will read the file dictionary.txt, which is our version of the Pronouncing Dictionary. You must use this file, not any files from the CMU website. Take a look at our dictionary.txt file to see the format; notice that any line beginning with ;;; is a comment and not part of the dictionary.</p>
+<p>Notice that the words in dictionary.txt are all uppercase and that they do not contain surrounding punctuation. When your program looks up a word, use the uppercase form, with no leading or trailing punctuation. Function clean_up in the starter code file poetry_functions.py will be be helpful here. </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> Poetry Form Checker</p>
+<p>Limericks, sonnets, haiku, and other forms of poetry each follow prescribed patterns that give the number of ]]>
+    </summary>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="小程序" scheme="http://yoursite.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="python小程序" scheme="http://yoursite.com/categories/python%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[第一篇文章--哈哈]]></title>
