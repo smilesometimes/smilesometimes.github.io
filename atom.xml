@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-19T09:40:13.649Z</updated>
+  <updated>2015-04-19T12:52:55.596Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,27 +19,27 @@
     <link href="http://yoursite.com/2015/04/18/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83winpython%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/04/18/python机器学习环境winpython安装/</id>
     <published>2015-04-18T14:11:26.000Z</published>
-    <updated>2015-04-19T07:24:34.000Z</updated>
+    <updated>2015-04-19T12:50:53.000Z</updated>
     <content type="html"><![CDATA[<p>系统：win7 64位</p>
 <hr>
-<h2 id="1Winpython介绍">1Winpython介绍</h2>
+<h2 id="1_Winpython介绍">1 Winpython介绍</h2>
 <p>winpython是一种python的IDE。<a id="more"></a><br>它包含了常用的科学计算工具包numpy，scipy，sklearn，matplotlib，guiqwt等，省去了一个个安装的麻烦（尤其是windows下）。<br>winpython自带有spyder可以像matlab一样查看变量，步进调试程序。<br>推荐一个机器学习库sklearn（scikit-learn），看<a href="http://scikit-learn.org/stable/tutorial/index.html" target="_blank" rel="external">scikit-learn的官方文档</a>，还有好多<a href="http://scikit-learn.org/stable/auto_examples/index.html" target="_blank" rel="external">官方例子</a>，就可以很好的学习机器学习了。  </p>
 <hr>
-<h2 id="2Winpython安装">2Winpython安装</h2>
+<h2 id="2_Winpython安装">2 Winpython安装</h2>
 <h3 id="2-1下载">2.1下载</h3>
 <p>下载地址（大概200m）：<a href="http://www.softpedia.com/get/Programming/Coding-languages-Compilers/WinPython.shtml" target="_blank" rel="external">http://www.softpedia.com/get/Programming/Coding-languages-Compilers/WinPython.shtml</a><br>有python2.7，3.3和3.4的。（我选的3.4 64位的）  </p>
 <h3 id="2-2安装">2.2安装</h3>
 <p>双击WinPython-64bit-3.4.3.2.exe 安装。<br>C盘的剩余空间要大于1.3g，貌似是先解压到c盘，再安装到用户选择的目录下的。  </p>
 <hr>
-<h2 id="3Winpython使用">3Winpython使用</h2>
+<h2 id="3_Winpython使用">3 Winpython使用</h2>
 <p>双击文件夹下的spyder.exe（文件件下还有许多其他好用的工具）<br><img src="/imgs/machine/winpython1.JPG" alt="goeclise"><br>使用spyder就可以像matlab一样，进行计算调试程序了。右上角是变量空间。<br><img src="/imgs/machine/spyder.JPG" alt="go_hello"></p>
-<h2 id="4ubuntu">4ubuntu</h2>
+<h2 id="4_ubuntu">4 ubuntu</h2>
 <p>ubuntu下软件中心中就可以下载到spyder2和spyder3而且ubuntu中安装python库比较方便,这里就不介绍了。  </p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>系统：win7 64位</p>
 <hr>
-<h2 id="1Winpython介绍">1Winpython介绍</h2>
+<h2 id="1_Winpython介绍">1 Winpython介绍</h2>
 <p>winpython是一种python的IDE。]]>
     
     </summary>
