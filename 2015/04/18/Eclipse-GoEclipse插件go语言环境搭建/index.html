@@ -5,13 +5,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>生活感悟 | Paradise</title>
+  <title>Eclipse+GoEclipse插件go语言环境搭建 | Paradise</title>
   <meta name="author" content="smilesometimes">
+  
+  <meta name="description" content="系统：ubuntu14.10 64位  
+
+1 安装java
+在终端中输入以下命令">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Eclipse+GoEclipse插件go语言环境搭建"/>
   <meta property="og:site_name" content="Paradise"/>
 
   
@@ -198,25 +203,119 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">生活感悟</h2>
-
-
-  <div class="archive">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2015-01-19T08:28:00.000Z"><a href="/2015/01/19/第一篇文章-哈哈/">1月 19 2015</a></time>
-            
-              <h1 class="title"><a href="/2015/01/19/第一篇文章-哈哈/">第一篇文章--哈哈</a></h1>
-            
-          </header>
-        </div>
-      </article>
+      <img src="">
     
   </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-04-18T12:07:26.000Z"><a href="/2015/04/18/Eclipse-GoEclipse插件go语言环境搭建/">4月 18 2015</a></time>
+      
+      
+  
+    <h1 class="title">Eclipse+GoEclipse插件go语言环境搭建</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>系统：ubuntu14.10 64位  </p>
+<hr>
+<h2 id="1_安装java">1 安装java</h2>
+<p>在终端中输入以下命令<a id="more"></a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="operator"><span class="keyword">install</span> <span class="keyword">default</span>-jre</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> <span class="keyword">default</span>-jdk</div></pre></td></tr></table></figure>
+
+<p>参考 <a href="http://linux.cn/article-3792-1.html" target="_blank" rel="external">http://linux.cn/article-3792-1.html</a></p>
+<h2 id="2_安装Eclipse">2 安装Eclipse</h2>
+<p>参考 <a href="http://qkwu.net/hw/341.html" target="_blank" rel="external">http://qkwu.net/hw/341.html</a></p>
+<h2 id="3_安装go语言">3 安装go语言</h2>
+<p>在终端中输入 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install golang</div></pre></td></tr></table></figure>
+
+<p>参考 <a href="http://linux.cn/article-4854-weibo.html?fromuid=14763" target="_blank" rel="external">http://linux.cn/article-4854-weibo.html?fromuid=14763</a></p>
+<h3 id="3-1做个测试编写heloworld-go看是否安装成功">3.1做个测试编写heloworld.go看是否安装成功</h3>
+<p><img src="/imgs/go/gohelloworld.png" alt="go_hello"></p>
+<h2 id="4_安装GoEclipse插件">4 安装GoEclipse插件</h2>
+<p>点击<strong>eclipse-&gt;help-&gt;install new software</strong>点击<strong>add</strong>按钮<br>在框中的”Name”中输入”GoEclipse”(不包括引号)<br>在location中输入“<a href="https://github.com/GoClipse/releases/raw/master/”" target="_blank" rel="external">https://github.com/GoClipse/releases/raw/master/”</a><br>参考 <a href="http://www.oschina.net/question/88981_166406" target="_blank" rel="external">http://www.oschina.net/question/88981_166406</a></p>
+<h3 id="图片如下一直点next就行，国内可能会有点慢,安装完重启eclispe">图片如下一直点next就行，国内可能会有点慢,安装完重启eclispe</h3>
+<p>试了试goeclipse是安装成功了但是还没法运行改天再弄！！！！<br><img src="/imgs/go/goeclipse.png" alt="goeclise"></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/go语言/">go语言</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/golang/">golang</a>, <a href="/tags/环境搭建/">环境搭建</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div class="bdsharebuttonbox">
+<a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
+    
+    <a href="/2015/04/18/python机器学习环境winpython安装/" class="alignleft prev" >上一页</a>
+    
+    
+    <a href="/2015/01/22/Poetry-Form-Checker-诗歌形式检测小程序/" class="alignright next" >下一页</a>
+    
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"smilesometimes"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	
+<!-- Duoshuo Comment END -->  
+
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

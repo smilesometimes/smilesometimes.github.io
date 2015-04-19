@@ -1,0 +1,13 @@
+winpython是一种python的IDE。
+它包含了常用的科学计算工具包numpy，scipy，sklearn，matplotlib，guiqwt省去了一个个安装的麻烦
+同学推荐我了一个机器学习库sklearn（scikit-learn），看scikit-learn的官方文档，还有好多官方例子，就可以很好的学习机器学习了。
+还有自带有spyder可以像matlab一样查看变量，步进调试程序。 
+
+记得c盘的空间要大于1.2G,貌似是先解压到c盘，在安装到用户选择的目录中的。
+http://www.softpedia.com/get/Programming/Coding-languages-Compilers/WinPython.shtml
+有python2.7，3.3和3.4的
+
+下载64位winpython 3.4，X64
+双击WinPython-64bit-3.4.3.2.exe 安装
+
+打开文件夹下的spyder.exe
