@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-27T02:31:34.066Z</updated>
+  <updated>2015-04-27T02:37:26.790Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://yoursite.com/2015/04/26/%E8%87%AA%E9%80%82%E5%BA%94%E7%BC%96%E7%A0%81%E8%B0%83%E5%88%B6%EF%BC%88AMC%EF%BC%89/"/>
     <id>http://yoursite.com/2015/04/26/自适应编码调制（AMC）/</id>
     <published>2015-04-26T14:15:14.000Z</published>
-    <updated>2015-04-27T02:31:25.000Z</updated>
+    <updated>2015-04-27T02:37:18.000Z</updated>
     <content type="html"><![CDATA[<h2 id="介绍">介绍</h2>
 <hr>
 <p><strong>自适应编码调制（Adaptive Modulation and Coding）</strong>技术是一种自适应技术，其能够根据信道状态自适应地<a id="more"></a>调节的传输参数是调制方式、信道编码方式和码率，系统根据当前的信道条件，在保证一定系统性能的前提下(如保证BLER小于某个门限值)来确定发射端各路数据流应使用的调制编码方式，从而<strong>提高系统的吞吐率</strong>。 </p>
 <hr>
 <h2 id="信道编码">信道编码</h2>
-<p>！<a href="/imgs/amc/编码.jpg">编码</a></p>
+<p><img src="/imgs/amc/信道编码.jpg" alt=""></p>
 <blockquote>
 <ul>
 <li>由于信道有干扰和衰落，为增强抗干扰能力。要对传输的信息进行的纠检错、编码就是信道编码。</li>
