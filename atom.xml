@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-26T14:31:31.448Z</updated>
+  <updated>2015-04-27T02:25:17.331Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,11 +19,60 @@
     <link href="http://yoursite.com/2015/04/26/%E8%87%AA%E9%80%82%E5%BA%94%E7%BC%96%E7%A0%81%E8%B0%83%E5%88%B6%EF%BC%88AMC%EF%BC%89/"/>
     <id>http://yoursite.com/2015/04/26/自适应编码调制（AMC）/</id>
     <published>2015-04-26T14:15:14.000Z</published>
-    <updated>2015-04-26T14:15:15.000Z</updated>
-    <content type="html"><![CDATA[]]></content>
+    <updated>2015-04-27T02:25:11.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="介绍">介绍</h2>
+<hr>
+<p><strong>自适应编码调制（Adaptive Modulation and Coding）</strong>技术是一种自适应技术，其能够根据信道状态自适应地<a id="more"></a>调节的传输参数是调制方式、信道编码方式和码率，系统根据当前的信道条件，在保证一定系统性能的前提下(如保证BLER小于某个门限值)来确定发射端各路数据流应使用的调制编码方式，从而<strong>提高系统的吞吐率</strong>。 </p>
+<hr>
+<h2 id="信道编码">信道编码</h2>
+<p>！<a href="/imgs/amc/编码.jpg">编码</a></p>
+<blockquote>
+<ul>
+<li>由于信道有干扰和衰落，为增强抗干扰能力。要对传输的信息进行的纠检错、编码就是信道编码。</li>
+<li>信道编码引入的冗余信息越多，纠错能力越强。</li>
+<li>码率（R） = 如数信息比特数/输出比特数。 </li>
+</ul>
+</blockquote>
+<h3 id="卷积码">卷积码</h3>
+<p>卷积码一般表示为（n,k,m），k为信息组的长度，n表示每组信息对应输出的码长度，m表示与此前输出的m个信息关联。下图为R=1/2的卷积码（2,1,2）编码器框图，如输入数据（8位）D=[11010000]此编码器就会输出码字（16位）C=[1101010010110000]<br><img src="/imgs/amc/编码.bmp" alt="卷积码"></p>
+<h2 id="调制">调制</h2>
+<p>调制一般是控制载波符号的初相和振幅，来表示不同的比特信息，不同的调制方式传输比特的速度是不一样的（高阶调制传的更快）。这里不做过多介绍。</p>
+<blockquote>
+<ul>
+<li>Bpsk       一个符号可以表示一个比特。</li>
+<li>Qpsk       一个符号可以表示两个比特。    </li>
+<li>16QAM      一个符号可以表示四个比特。</li>
+</ul>
+</blockquote>
+<h2 id="仿真">仿真</h2>
+<p>仿真环境 ：matlab2014a win7<br>采用的技术：</p>
+<blockquote>
+<ul>
+<li>编码：卷积码（R = 1/2 ,R = 1/3）</li>
+<li>调制：（Bpsk，Qpsk，16QAM）</li>
+<li>信道：高斯信道</li>
+<li>块大小： 100比特</li>
+</ul>
+</blockquote>
+<hr>
+<p><img src="/imgs/amc/误码率.bmp" alt="误码率"><br>由上图比较可以看出，同样的误码率条件下，码率越高的编码抗干扰能力越弱， 高阶调制的误码率更高。</p>
+<hr>
+<p>由于实际通信中编码以比特块进行的（比如统一以100个比特为一块进行编码传送），所以误块率更具有参考价值。<br><img src="/imgs/amc/误块率.bmp" alt="误块率"><br>同样，高阶调制，高的编码速率抗干扰能力差。</p>
+<hr>
+<p>以 r=1/3 Bpsk的最大传输速率为基准，计算每种方式的吞吐量（传输速率）<br><img src="/imgs/amc/吞吐率.bmp" alt="吞吐率"></p>
+<h2 id="结论">结论</h2>
+<p>为提高信息传输速率，利用amc技术，可以检测信道的条件，在信道条件好的情况下（小区中心），可以采用高的编码速率和高阶调制，在信道条件差的情况下才用地的编码速率和低阶调制方式。<br>ps:这个是我的宽带无线通信的大作业，希望好多年以后再看这篇文章我能看懂吧，虽然以后可能用不到学的通信知识了。</p>
+]]></content>
     <summary type="html">
-    <![CDATA[]]>
+    <![CDATA[<h2 id="介绍">介绍</h2>
+<hr>
+<p><strong>自适应编码调制（Adaptive Modulation and Coding）</strong>技术是一种自适应技术，其能够根据信道状态自适应地]]>
+    
     </summary>
+    
+      <category term="通信" scheme="http://yoursite.com/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="通信" scheme="http://yoursite.com/categories/%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
@@ -32,11 +81,11 @@
     <link href="http://yoursite.com/2015/04/18/python%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83winpython%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2015/04/18/python机器学习环境winpython安装/</id>
     <published>2015-04-18T14:11:26.000Z</published>
-    <updated>2015-04-19T12:50:53.000Z</updated>
-    <content type="html"><![CDATA[<p>系统：win7 64位</p>
+    <updated>2015-04-27T01:03:11.000Z</updated>
+    <content type="html"><![CDATA[<p>系统：win7 64位<a id="more"></a> </p>
 <hr>
 <h2 id="1_Winpython介绍">1 Winpython介绍</h2>
-<p>winpython是一种python的IDE。<a id="more"></a><br>它包含了常用的科学计算工具包numpy，scipy，sklearn，matplotlib，guiqwt等，省去了一个个安装的麻烦（尤其是windows下）。<br>winpython自带有spyder可以像matlab一样查看变量，步进调试程序。<br>推荐一个机器学习库sklearn（scikit-learn），看<a href="http://scikit-learn.org/stable/tutorial/index.html" target="_blank" rel="external">scikit-learn的官方文档</a>，还有好多<a href="http://scikit-learn.org/stable/auto_examples/index.html" target="_blank" rel="external">官方例子</a>，就可以很好的学习机器学习了。  </p>
+<p>winpython是一种python的IDE。<br>它包含了常用的科学计算工具包numpy，scipy，sklearn，matplotlib，guiqwt等，省去了一个个安装的麻烦（尤其是windows下）。<br>winpython自带有spyder可以像matlab一样查看变量，步进调试程序。<br>推荐一个机器学习库sklearn（scikit-learn），看<a href="http://scikit-learn.org/stable/tutorial/index.html" target="_blank" rel="external">scikit-learn的官方文档</a>，还有好多<a href="http://scikit-learn.org/stable/auto_examples/index.html" target="_blank" rel="external">官方例子</a>，就可以很好的学习机器学习了。  </p>
 <hr>
 <h2 id="2_Winpython安装">2 Winpython安装</h2>
 <h3 id="2-1下载">2.1下载</h3>
@@ -50,10 +99,7 @@
 <p>ubuntu下软件中心中就可以下载到spyder2和spyder3而且ubuntu中安装python库比较方便,这里就不介绍了。  </p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>系统：win7 64位</p>
-<hr>
-<h2 id="1_Winpython介绍">1 Winpython介绍</h2>
-<p>winpython是一种python的IDE。]]>
+    <![CDATA[<p>系统：win7 64位]]>
     
     </summary>
     
@@ -72,11 +118,11 @@
     <link href="http://yoursite.com/2015/04/18/Eclipse-GoEclipse%E6%8F%92%E4%BB%B6go%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2015/04/18/Eclipse-GoEclipse插件go语言环境搭建/</id>
     <published>2015-04-18T12:07:26.000Z</published>
-    <updated>2015-04-19T07:29:06.000Z</updated>
-    <content type="html"><![CDATA[<p>系统：ubuntu14.10 64位  </p>
+    <updated>2015-04-27T01:03:40.000Z</updated>
+    <content type="html"><![CDATA[<p>系统：ubuntu14.10 64位  <a id="more"></a></p>
 <hr>
 <h2 id="1_安装java">1 安装java</h2>
-<p>在终端中输入以下命令<a id="more"></a></p>
+<p>在终端中输入以下命令</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="operator"><span class="keyword">install</span> <span class="keyword">default</span>-jre</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> <span class="keyword">default</span>-jdk</div></pre></td></tr></table></figure>
 
 <p>参考 <a href="http://linux.cn/article-3792-1.html" target="_blank" rel="external">http://linux.cn/article-3792-1.html</a></p>
@@ -95,10 +141,7 @@
 <p>试了试goeclipse是安装成功了但是还没法运行改天再弄！！！！<br><img src="/imgs/go/goeclipse.png" alt="goeclise"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>系统：ubuntu14.10 64位  </p>
-<hr>
-<h2 id="1_安装java">1 安装java</h2>
-<p>在终端中输入以下命令]]>
+    <![CDATA[<p>系统：ubuntu14.10 64位  ]]>
     
     </summary>
     
@@ -115,9 +158,9 @@
     <link href="http://yoursite.com/2015/01/22/Poetry-Form-Checker-%E8%AF%97%E6%AD%8C%E5%BD%A2%E5%BC%8F%E6%A3%80%E6%B5%8B%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     <id>http://yoursite.com/2015/01/22/Poetry-Form-Checker-诗歌形式检测小程序/</id>
     <published>2015-01-22T03:31:28.000Z</published>
-    <updated>2015-01-22T08:55:57.000Z</updated>
+    <updated>2015-04-27T01:03:56.000Z</updated>
     <content type="html"><![CDATA[<p> Poetry Form Checker</p>
-<p>Limericks, sonnets, haiku, and other forms of poetry each follow prescribed patterns that give the number of lines, the number of syllables on each line, and a rhyme scheme. For example, limericks are five lines long; the first, second, and fifth lines each have eight syllables and rhyme with each other; and the third and fourth lines each have five syllables and rhyme with each other. (There are additional rules about the location and number of stressed vs. unstressed syllables, but we’ll ignore those rules for this assignment.)<a id="more"></a></p>
+<p>Limericks, sonnets, haiku, and other forms of poetry <a id="more"></a> each follow prescribed patterns that give the number of lines, the number of syllables on each line, and a rhyme scheme. For example, limericks are five lines long; the first, second, and fifth lines each have eight syllables and rhyme with each other; and the third and fourth lines each have five syllables and rhyme with each other. (There are additional rules about the location and number of stressed vs. unstressed syllables, but we’ll ignore those rules for this assignment.)<a id="more"></a></p>
 <p>Here is a stupendous work of limerick art:</p>
 <pre><code>I wish I had thought <span class="keyword">of</span> a rhyme
 Before I ran <span class="keyword">all</span> <span class="keyword">out</span> <span class="keyword">of</span> <span class="typename">time</span>!
@@ -132,7 +175,7 @@ That rains <span class="attribute">'til</span> I<span class="attribute">'m</span
 ]]></content>
     <summary type="html">
     <![CDATA[<p> Poetry Form Checker</p>
-<p>Limericks, sonnets, haiku, and other forms of poetry each follow prescribed patterns that give the number of lines, the number of syllables on each line, and a rhyme scheme. For example, limericks are five lines long; the first, second, and fifth lines each have eight syllables and rhyme with each other; and the third and fourth lines each have five syllables and rhyme with each other. (There are additional rules about the location and number of stressed vs. unstressed syllables, but we’ll ignore those rules for this assignment.)]]>
+<p>Limericks, sonnets, haiku, and other forms of poetry <!--more--> each follow prescribed patterns that give the number of lines, the number of syllables on each line, and a rhyme scheme. For example, limericks are five lines long; the first, second, and fifth lines each have eight syllables and rhyme with each other; and the third and fourth lines each have five syllables and rhyme with each other. (There are additional rules about the location and number of stressed vs. unstressed syllables, but we’ll ignore those rules for this assignment.)]]>
     
     </summary>
     
@@ -149,9 +192,9 @@ That rains <span class="attribute">'til</span> I<span class="attribute">'m</span
     <link href="http://yoursite.com/2015/01/19/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0-%E5%93%88%E5%93%88/"/>
     <id>http://yoursite.com/2015/01/19/第一篇文章-哈哈/</id>
     <published>2015-01-19T08:28:00.000Z</published>
-    <updated>2015-04-19T03:57:40.000Z</updated>
+    <updated>2015-04-27T01:04:18.000Z</updated>
     <content type="html"><![CDATA[<hr>
-<p>今天,2015年1月20日，终于实现了魂牵梦绕的的梦想，在<strong><a href="http://zhanfang.github.io/" target="_blank" rel="external">詹神</a>和<a href="http://dby.github.io/" target="_blank" rel="external">杜少</a></strong>的帮助下（哈哈，特别感谢一下），用<strong>hexo</strong>在github上搭建了个博客!<br>我在coding网的主页：<a href="https://coding.net/u/paradise" target="_blank" rel="external">paradise</a>.<br>感谢<a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Zippera’s blog的hexo教程</a>.<a id="more"></a></p>
+<p>今天,2015年1月20日，终于实现了魂牵梦绕的的梦想，<a id="more"></a>在<strong><a href="http://zhanfang.github.io/" target="_blank" rel="external">詹神</a>和<a href="http://dby.github.io/" target="_blank" rel="external">杜少</a></strong>的帮助下（哈哈，特别感谢一下），用<strong>hexo</strong>在github上搭建了个博客!<br>我在coding网的主页：<a href="https://coding.net/u/paradise" target="_blank" rel="external">paradise</a>.<br>感谢<a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Zippera’s blog的hexo教程</a>.</p>
 <h2 id="1_一首小诗">1 一首小诗</h2>
 <hr>
 <p><strong>《豁然开朗》</strong> —<em>丰子恺</em><br>你若爱，<br>生活哪里都可爱；<br>你若恨，<br>生活哪里都可恨；<br>你若感恩，<br>处处可感恩；<br>你若成长，<br>事事可成长。<br>不是世界选择了你，<br>是你选择了这个世界。<br>既然无处可躲，<br>不如傻乐；<br>既然无处可逃，<br>不如喜悦；<br>既然没有净土，<br>不如静心；<br>既然没有如愿，<br>不如释然。</p>
@@ -164,7 +207,7 @@ That rains <span class="attribute">'til</span> I<span class="attribute">'m</span
 ]]></content>
     <summary type="html">
     <![CDATA[<hr>
-<p>今天,2015年1月20日，终于实现了魂牵梦绕的的梦想，在<strong><a href="http://zhanfang.github.io/" target="_blank" rel="external">詹神</a>和<a href="http://dby.github.io/" target="_blank" rel="external">杜少</a></strong>的帮助下（哈哈，特别感谢一下），用<strong>hexo</strong>在github上搭建了个博客!<br>我在coding网的主页：<a href="https://coding.net/u/paradise" target="_blank" rel="external">paradise</a>.<br>感谢<a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Zippera’s blog的hexo教程</a>.]]>
+<p>今天,2015年1月20日，终于实现了魂牵梦绕的的梦想，]]>
     
     </summary>
     
