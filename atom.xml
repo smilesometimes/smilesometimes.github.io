@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Maybe it's the perfect day.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-04-28T08:23:05.646Z</updated>
+  <updated>2015-05-23T14:28:28.487Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,61 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git学习笔记]]></title>
+    <link href="http://yoursite.com/2015/05/23/git%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2015/05/23/git学习笔记/</id>
+    <published>2015-05-23T14:16:31.000Z</published>
+    <updated>2015-05-23T14:28:15.000Z</updated>
+    <content type="html"><![CDATA[<p>做下git笔记@^@，after 看了《<em>程序员修炼三部曲 第一步</em> 使用git》<a id="more"></a>。</p>
+<h2 id="环境:_window7_64位"><em>环境: window7 64位</em></h2>
+<h1 id="1_git安装与设置"><strong>1 git安装与设置</strong></h1>
+<h2 id="1-1_安装">1.1 安装</h2>
+<p>下载<a href="https://help.github.com/articles/set-up-git/#platform-windows" target="_blank" rel="external">github for windows</a> 。安装完成会提供一个github客户端和一个git shell。<br>linux和mac该网址也有介绍。</p>
+<h2 id="1-2_设置">1.2 设置</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git config --<span class="keyword">global</span> user.name “AAAAA”         <span class="comment">//账户名,github账户名</span></div><div class="line">git config --<span class="keyword">global</span> user.email “AAAAA<span class="variable">@QQ</span>.COM” <span class="comment">//邮件地址，方便联系修改者</span></div><div class="line">git config --<span class="keyword">global</span> <span class="keyword">color</span>.ui <span class="string">"auto"</span>           <span class="comment">//不同颜色显示修改内容，也可设置为false（没有颜色显示） </span></div><div class="line">git config --<span class="keyword">global</span> --list                  <span class="comment">//列出所有设置的全局变量</span></div><div class="line">git <span class="keyword">help</span> &lt;command&gt;                          <span class="comment">//命令帮助</span></div></pre></td></tr></table></figure>
+
+<h2 id="1-3_图形界面">1.3 图形界面</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git gui&     <span class="comment">//git 图形界面</span></div><div class="line">gitk&       <span class="comment">//显示当前分支的历史记录，--all显示所有分支</span></div><div class="line"><span class="comment">//加&符号使图形窗口在新进程运行，不会让shell等待。</span></div></pre></td></tr></table></figure>
+
+<h2 id="哈@-@，gitk用着还是特别不错的，如果黑框框看烦了的话。">哈@-@，gitk用着还是特别不错的，如果黑框框看烦了的话。</h2>
+<h1 id="2_常用操作"><strong>2 常用操作</strong></h1>
+<h2 id="2-1_基本操作">2.1 基本操作</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">cd &lt;项目目录&gt;</div><div class="line">git init                <span class="comment"> //初始化git，建立版本库</span></div><div class="line">git status              <span class="comment"> //查看状态，是否有文件改动</span></div><div class="line">git <span class="built_in">add</span> index.html      <span class="comment"> //暂存 index.html</span></div><div class="line">git commit -m <span class="string">"留言"</span>    <span class="comment"> //提交暂存</span></div><div class="line">git <span class="built_in">add</span> -i              <span class="comment"> //交互模式暂存新文件</span></div><div class="line">git commit -m “留言” -<span class="operator">a</span> <span class="comment"> //提交所有修改</span></div><div class="line">git <span class="built_in">log</span> -n               <span class="comment"> //查看前n条的提交</span></div><div class="line">git <span class="built_in">log</span> <span class="comment">--pretty=oneline  //一行显示提交</span></div><div class="line">git <span class="built_in">log</span> -p               <span class="comment"> //显示详细提交（包括修改）</span></div><div class="line">git blame hello.html     <span class="comment"> //跟踪hello.html文件</span></div></pre></td></tr></table></figure>
+
+<h2 id="2-2_查看修改">2.2 查看修改</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git diff            <span class="comment">//比较目录与暂存的区别</span></div><div class="line">git diff --cached   <span class="comment">//比较暂存区和版本库的区别</span></div><div class="line">git diff HEAD       <span class="comment">//（暂存和未暂存）和版本库的区别</span></div><div class="line">git diff --stat <span class="number">1.0</span> HEAD  <span class="comment">// 很酷的参数--stat 统计1.0到HEAD的代码改动</span></div></pre></td></tr></table></figure>
+
+<h2 id="2-3_分支">2.3 分支</h2>
+<p>功能分支是分支的一种用法，可以在已有分支上创建新的分支，用于新功能开发或BUG修复，最后合并。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git branch RB_1<span class="number">.0</span> master  <span class="comment">//基于master分支创建RB_1.0分支</span></div><div class="line">git checkout RB_1<span class="number">.0</span>       <span class="comment">//切换到分支RB_1.0</span></div><div class="line">git <span class="built_in">tag</span> <span class="number">1.0</span> RB_1<span class="number">.0</span>        <span class="comment">//为RB_1.0分支末梢打上1.0标签</span></div><div class="line">git checkout <span class="attribute">-b</span> <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="subst">&lt;</span>父分支<span class="subst">&gt;</span> <span class="comment">//创建并检出新分支</span></div><div class="line">git branch <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="number">1.0</span>   <span class="comment">//在1.0标签处创建新分支</span></div><div class="line">git branch <span class="attribute">-m</span> <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="subst">&lt;</span>旧分支<span class="subst">&gt;</span> <span class="comment">//分支重命名</span></div><div class="line">git branch <span class="attribute">-d</span>/D          <span class="comment">//删除分支，大写D强制删除</span></div><div class="line">git revert               <span class="comment">//创建一个反向的新提交</span></div></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="3_合并"><strong>3 合并</strong></h1>
+<h2 id="3-1_自动合并">3.1 自动合并</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">merge</span> &lt;分支&gt;         <span class="comment"> //直接合并</span></div><div class="line">git <span class="built_in">merge</span> <span class="comment">--squash &lt;分支&gt; //压合合并，分支所有提交压合成一个提交。</span></div><div class="line">git <span class="built_in">merge</span> cherry-pick <span class="number">321</span>d76f<span class="comment"> //挑选合并</span></div></pre></td></tr></table></figure>
+
+<h2 id="3-2_冲突处理，图形化合并工具">3.2 冲突处理，图形化合并工具</h2>
+<p>git不能自动合并时，会产生冲突(conflict)，需要手工编辑。windows下有kdiff3合并工具。windows用户下载安装kdiff3.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//配置</span></div><div class="line">git config --<span class="keyword">global</span> merge.tool kdiff3</div><div class="line">git config --<span class="keyword">global</span> mergetool.kdiff3.path <span class="string">"D:\Program Files\KDiff3\kdiff3.exe"</span>             <span class="comment">//设置你的安装目录</span></div><div class="line"><span class="comment">//git merge 产生冲突后，运行以下命令</span></div><div class="line">git mergetool       <span class="comment">//发生冲突时，调用工具进行合并</span></div></pre></td></tr></table></figure>
+
+<h1 id="4_远程操作"><strong>4 远程操作</strong></h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> https:<span class="comment">//github.com/smilesometimes/mysite_test.git //克隆到本地</span></div><div class="line">git branch -r   <span class="comment">//列出远程分支 本地分支追随origin/master</span></div><div class="line">git fetch       <span class="comment">//取来，用远程版本库更新origin         </span></div><div class="line">git pull        <span class="comment">//取来，并合并</span></div><div class="line">git push        <span class="comment">//本地更改</span></div></pre></td></tr></table></figure>
+
+<h2 id="4-1_github">4.1 github</h2>
+<p>github可以为每个项目添加合作者，感兴趣的项目可以fork下来，提交代码。github 还可以为每个项目创建一个静态网页介绍。在gh-pages分支里。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>做下git笔记@^@，after 看了《<em>程序员修炼三部曲 第一步</em> 使用git》]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="git学习" scheme="http://yoursite.com/categories/git%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[自适应编码调制（AMC）]]></title>

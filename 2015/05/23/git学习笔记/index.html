@@ -5,15 +5,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Eclipse+GoEclipse插件go语言环境搭建 | Paradise</title>
+  <title>git学习笔记 | Paradise</title>
   <meta name="author" content="smilesometimes">
   
-  <meta name="description" content="系统：ubuntu14.10 64位">
+  <meta name="description" content="做下git笔记@^@，after 看了《程序员修炼三部曲 第一步 使用git》">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Eclipse+GoEclipse插件go语言环境搭建"/>
+  <meta property="og:title" content="git学习笔记"/>
   <meta property="og:site_name" content="Paradise"/>
 
   
@@ -218,36 +218,53 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-04-18T12:07:26.000Z"><a href="/2015/04/18/Eclipse-GoEclipse插件go语言环境搭建/">4月 18 2015</a></time>
+        <time datetime="2015-05-23T14:16:31.000Z"><a href="/2015/05/23/git学习笔记/">5月 23 2015</a></time>
       
       
   
-    <h1 class="title">Eclipse+GoEclipse插件go语言环境搭建</h1>
+    <h1 class="title">git学习笔记</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>系统：ubuntu14.10 64位  <a id="more"></a></p>
+        <p>做下git笔记@^@，after 看了《<em>程序员修炼三部曲 第一步</em> 使用git》<a id="more"></a>。</p>
+<h2 id="环境:_window7_64位"><em>环境: window7 64位</em></h2>
+<h1 id="1_git安装与设置"><strong>1 git安装与设置</strong></h1>
+<h2 id="1-1_安装">1.1 安装</h2>
+<p>下载<a href="https://help.github.com/articles/set-up-git/#platform-windows" target="_blank" rel="external">github for windows</a> 。安装完成会提供一个github客户端和一个git shell。<br>linux和mac该网址也有介绍。</p>
+<h2 id="1-2_设置">1.2 设置</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git config --<span class="keyword">global</span> user.name “AAAAA”         <span class="comment">//账户名,github账户名</span></div><div class="line">git config --<span class="keyword">global</span> user.email “AAAAA<span class="variable">@QQ</span>.COM” <span class="comment">//邮件地址，方便联系修改者</span></div><div class="line">git config --<span class="keyword">global</span> <span class="keyword">color</span>.ui <span class="string">"auto"</span>           <span class="comment">//不同颜色显示修改内容，也可设置为false（没有颜色显示） </span></div><div class="line">git config --<span class="keyword">global</span> --list                  <span class="comment">//列出所有设置的全局变量</span></div><div class="line">git <span class="keyword">help</span> &lt;command&gt;                          <span class="comment">//命令帮助</span></div></pre></td></tr></table></figure>
+
+<h2 id="1-3_图形界面">1.3 图形界面</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git gui&     <span class="comment">//git 图形界面</span></div><div class="line">gitk&       <span class="comment">//显示当前分支的历史记录，--all显示所有分支</span></div><div class="line"><span class="comment">//加&符号使图形窗口在新进程运行，不会让shell等待。</span></div></pre></td></tr></table></figure>
+
+<h2 id="哈@-@，gitk用着还是特别不错的，如果黑框框看烦了的话。">哈@-@，gitk用着还是特别不错的，如果黑框框看烦了的话。</h2>
+<h1 id="2_常用操作"><strong>2 常用操作</strong></h1>
+<h2 id="2-1_基本操作">2.1 基本操作</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">cd &lt;项目目录&gt;</div><div class="line">git init                <span class="comment"> //初始化git，建立版本库</span></div><div class="line">git status              <span class="comment"> //查看状态，是否有文件改动</span></div><div class="line">git <span class="built_in">add</span> index.html      <span class="comment"> //暂存 index.html</span></div><div class="line">git commit -m <span class="string">"留言"</span>    <span class="comment"> //提交暂存</span></div><div class="line">git <span class="built_in">add</span> -i              <span class="comment"> //交互模式暂存新文件</span></div><div class="line">git commit -m “留言” -<span class="operator">a</span> <span class="comment"> //提交所有修改</span></div><div class="line">git <span class="built_in">log</span> -n               <span class="comment"> //查看前n条的提交</span></div><div class="line">git <span class="built_in">log</span> <span class="comment">--pretty=oneline  //一行显示提交</span></div><div class="line">git <span class="built_in">log</span> -p               <span class="comment"> //显示详细提交（包括修改）</span></div><div class="line">git blame hello.html     <span class="comment"> //跟踪hello.html文件</span></div></pre></td></tr></table></figure>
+
+<h2 id="2-2_查看修改">2.2 查看修改</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git diff            <span class="comment">//比较目录与暂存的区别</span></div><div class="line">git diff --cached   <span class="comment">//比较暂存区和版本库的区别</span></div><div class="line">git diff HEAD       <span class="comment">//（暂存和未暂存）和版本库的区别</span></div><div class="line">git diff --stat <span class="number">1.0</span> HEAD  <span class="comment">// 很酷的参数--stat 统计1.0到HEAD的代码改动</span></div></pre></td></tr></table></figure>
+
+<h2 id="2-3_分支">2.3 分支</h2>
+<p>功能分支是分支的一种用法，可以在已有分支上创建新的分支，用于新功能开发或BUG修复，最后合并。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git branch RB_1<span class="number">.0</span> master  <span class="comment">//基于master分支创建RB_1.0分支</span></div><div class="line">git checkout RB_1<span class="number">.0</span>       <span class="comment">//切换到分支RB_1.0</span></div><div class="line">git <span class="built_in">tag</span> <span class="number">1.0</span> RB_1<span class="number">.0</span>        <span class="comment">//为RB_1.0分支末梢打上1.0标签</span></div><div class="line">git checkout <span class="attribute">-b</span> <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="subst">&lt;</span>父分支<span class="subst">&gt;</span> <span class="comment">//创建并检出新分支</span></div><div class="line">git branch <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="number">1.0</span>   <span class="comment">//在1.0标签处创建新分支</span></div><div class="line">git branch <span class="attribute">-m</span> <span class="subst">&lt;</span>新分支<span class="subst">&gt;</span> <span class="subst">&lt;</span>旧分支<span class="subst">&gt;</span> <span class="comment">//分支重命名</span></div><div class="line">git branch <span class="attribute">-d</span>/D          <span class="comment">//删除分支，大写D强制删除</span></div><div class="line">git revert               <span class="comment">//创建一个反向的新提交</span></div></pre></td></tr></table></figure>
+
 <hr>
-<h2 id="1_安装java">1 安装java</h2>
-<p>在终端中输入以下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get <span class="operator"><span class="keyword">install</span> <span class="keyword">default</span>-jre</span></div><div class="line">sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> <span class="keyword">default</span>-jdk</div></pre></td></tr></table></figure>
+<h1 id="3_合并"><strong>3 合并</strong></h1>
+<h2 id="3-1_自动合并">3.1 自动合并</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">merge</span> &lt;分支&gt;         <span class="comment"> //直接合并</span></div><div class="line">git <span class="built_in">merge</span> <span class="comment">--squash &lt;分支&gt; //压合合并，分支所有提交压合成一个提交。</span></div><div class="line">git <span class="built_in">merge</span> cherry-pick <span class="number">321</span>d76f<span class="comment"> //挑选合并</span></div></pre></td></tr></table></figure>
 
-<p>参考 <a href="http://linux.cn/article-3792-1.html" target="_blank" rel="external">http://linux.cn/article-3792-1.html</a></p>
-<h2 id="2_安装Eclipse">2 安装Eclipse</h2>
-<p>参考 <a href="http://qkwu.net/hw/341.html" target="_blank" rel="external">http://qkwu.net/hw/341.html</a></p>
-<h2 id="3_安装go语言">3 安装go语言</h2>
-<p>在终端中输入 </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">sudo</span> apt-get install golang</div></pre></td></tr></table></figure>
+<h2 id="3-2_冲突处理，图形化合并工具">3.2 冲突处理，图形化合并工具</h2>
+<p>git不能自动合并时，会产生冲突(conflict)，需要手工编辑。windows下有kdiff3合并工具。windows用户下载安装kdiff3.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//配置</span></div><div class="line">git config --<span class="keyword">global</span> merge.tool kdiff3</div><div class="line">git config --<span class="keyword">global</span> mergetool.kdiff3.path <span class="string">"D:\Program Files\KDiff3\kdiff3.exe"</span>             <span class="comment">//设置你的安装目录</span></div><div class="line"><span class="comment">//git merge 产生冲突后，运行以下命令</span></div><div class="line">git mergetool       <span class="comment">//发生冲突时，调用工具进行合并</span></div></pre></td></tr></table></figure>
 
-<p>参考 <a href="http://linux.cn/article-4854-weibo.html?fromuid=14763" target="_blank" rel="external">http://linux.cn/article-4854-weibo.html?fromuid=14763</a></p>
-<h3 id="3-1做个测试编写heloworld-go看是否安装成功">3.1做个测试编写heloworld.go看是否安装成功</h3>
-<p><img src="/imgs/go/gohelloworld.png" alt="go_hello"></p>
-<h2 id="4_安装GoEclipse插件">4 安装GoEclipse插件</h2>
-<p>点击<strong>eclipse-&gt;help-&gt;install new software</strong>点击<strong>add</strong>按钮<br>在框中的”Name”中输入”GoEclipse”(不包括引号)<br>在location中输入“<a href="https://github.com/GoClipse/releases/raw/master/”" target="_blank" rel="external">https://github.com/GoClipse/releases/raw/master/”</a><br>参考 <a href="http://www.oschina.net/question/88981_166406" target="_blank" rel="external">http://www.oschina.net/question/88981_166406</a></p>
-<h3 id="图片如下一直点next就行，国内可能会有点慢,安装完重启eclispe">图片如下一直点next就行，国内可能会有点慢,安装完重启eclispe</h3>
-<p>试了试goeclipse是安装成功了但是还没法运行改天再弄！！！！<br><img src="/imgs/go/goeclipse.png" alt="goeclise"></p>
+<h1 id="4_远程操作"><strong>4 远程操作</strong></h1>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git <span class="keyword">clone</span> https:<span class="comment">//github.com/smilesometimes/mysite_test.git //克隆到本地</span></div><div class="line">git branch -r   <span class="comment">//列出远程分支 本地分支追随origin/master</span></div><div class="line">git fetch       <span class="comment">//取来，用远程版本库更新origin         </span></div><div class="line">git pull        <span class="comment">//取来，并合并</span></div><div class="line">git push        <span class="comment">//本地更改</span></div></pre></td></tr></table></figure>
+
+<h2 id="4-1_github">4.1 github</h2>
+<p>github可以为每个项目添加合作者，感兴趣的项目可以fork下来，提交代码。github 还可以为每个项目创建一个静态网页介绍。在gh-pages分支里。</p>
 
       
     </div>
@@ -256,13 +273,13 @@
         
   
   <div class="categories">
-    <a href="/categories/go语言/">go语言</a>
+    <a href="/categories/git学习/">git学习</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/golang/">golang</a>, <a href="/tags/环境搭建/">环境搭建</a>
+    <a href="/tags/git/">git</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -282,10 +299,8 @@
 
  <nav id="pagination" >
     
-    <a href="/2015/04/18/python机器学习环境winpython安装/" class="alignleft prev" >上一页</a>
     
-    
-    <a href="/2015/01/22/Poetry-Form-Checker-诗歌形式检测小程序/" class="alignright next" >下一页</a>
+    <a href="/2015/04/26/自适应编码调制（AMC）/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>
